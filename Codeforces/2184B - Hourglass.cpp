@@ -14,5 +14,5 @@ int main() {
 	else cout << (((m % (2 * k)) < k) ? s - m % k : k - m % k) << '\n';
     }
     
-    return 0;
+    
 }
