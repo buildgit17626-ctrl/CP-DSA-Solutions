@@ -8,48 +8,16 @@ int main() {
     cin>>t;
     while(t--)
     {
-        int n;
-        cin>>n;
-        string a;
-        cin>>a;
+        long long a,b,c;
+        cin>>a>>b>>c;
         
-        int cnt1=0;
-        int cnt0=0;
-        
-        for(int i=0;i<n;i++)
+        if((a+c)-b >= abs(a-b))
         {
-            if(a[i]=='1')cnt1++;
-            else cnt0++;
+            cout<<(a+c)-b<<endl;
         }
-        
-        if(a[0]=='1')
+        else if((a+c)-b < abs(a-b))
         {
-            cout<<cnt0<<endl;
-            continue;
+            cout<<abs(a-b)<<endl;
         }
-        
-        bool flag=false;
-        int cur0=0;
-        int cur1=0;
-        
-        int ans=1e9;
-        for(int i=0;i<n;i++)
-        {
-            if(a[i]=='1')
-            {
-                cur1++;
-                
-            }
-            
-            if(a[i]=='0')
-            cur0++;
-            
-            int cost=cur1+(cnt0-cur0);
-                ans=min(ans,cost);
-            
-        }
-        
-        cout<<ans<<endl;
-       
     }
 }
