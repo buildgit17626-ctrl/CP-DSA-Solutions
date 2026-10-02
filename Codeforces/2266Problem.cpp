@@ -8,16 +8,22 @@ int main() {
     cin>>t;
     while(t--)
     {
-        long long a,b,c;
-        cin>>a>>b>>c;
+        int n;
+        cin>>n;
+        vector<int>a(n);
+        int mini=INT_MAX;
+        for(int i=0;i<3;i++)
+        {
+            cin>>a[i];
+            mini=min(mini,a[i]);
+        }
         
-        if((a+c)-b >= abs(a-b))
-        {
-            cout<<(a+c)-b<<endl;
-        }
-        else if((a+c)-b < abs(a-b))
-        {
-            cout<<abs(a-b)<<endl;
-        }
+        
+         
+         
+       
+       cout<<n-mini<<endl;
+        
     }
+    
 }
